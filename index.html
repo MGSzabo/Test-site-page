@@ -25,7 +25,6 @@ HEADER
 
     <a href="#inicio" class="logo">
 
-        <!-- usar a imagem sem fundo -->
         <img src="images/logo.png" alt="Larium">
 
     </a>
@@ -33,11 +32,8 @@ HEADER
     <nav>
 
         <a href="#categorias">Categorias</a>
-
         <a href="#maisvendidos">Mais vendidos</a>
-
         <a href="#avaliados">Mais avaliados</a>
-
         <a href="#sobre">Laurinho</a>
 
     </nav>
@@ -52,18 +48,9 @@ HERO
 
     <picture>
 
-        <!-- imagem exclusiva para celular -->
+        <source media="(max-width:768px)" srcset="images/hero-mobile.png">
 
-        <source
-            media="(max-width:768px)"
-            srcset="images/hero-mobile.png">
-
-        <!-- desktop -->
-
-        <img
-            src="images/hero.png"
-            alt=""
-            class="hero-bg">
+        <img src="images/hero.png" alt="" class="hero-bg">
 
     </picture>
 
@@ -73,88 +60,40 @@ HERO
 
         <h1>
 
-            <img
-                src="images/logo.png"
-                alt="Larium"
-                class="hero-logo">
+            <img src="images/logo.png" alt="Larium" class="hero-logo">
 
         </h1>
 
         <h2 class="slogan">
-
             Um único lar, tudo em um só lugar.
-
         </h2>
 
         <div class="texto-rotativo">
 
             <span class="frase ativa">
-
-                <span class="azul">
-                    Tudo para sua casa,
-                </span>
-
-                <span class="verde">
-                    do básico
-                </span>
-
-                <span class="azul">
-                    ao inteligente.
-                </span>
-
+                <span class="azul">Tudo para sua casa,</span>
+                <span class="verde">do básico</span>
+                <span class="azul">ao inteligente.</span>
             </span>
 
             <span class="frase">
-
-                <span class="azul">
-                    Organização,
-                </span>
-
-                <span class="verde">
-                    conforto
-                </span>
-
-                <span class="azul">
-                    e tecnologia.
-                </span>
-
+                <span class="azul">Organização,</span>
+                <span class="verde">conforto</span>
+                <span class="azul">e tecnologia.</span>
             </span>
 
             <span class="frase">
-
-                <span class="azul">
-                    Escolha melhor.
-                </span>
-
-                <span class="verde">
-                    Compre melhor.
-                </span>
-
-                <span class="azul">
-                    Viva melhor.
-                </span>
-
+                <span class="azul">Escolha melhor.</span>
+                <span class="verde">Compre melhor.</span>
+                <span class="azul">Viva melhor.</span>
             </span>
 
         </div>
 
         <div class="hero-botoes">
 
-            <a
-                href="#categorias"
-                class="btn btn-principal">
-
-                Explorar categorias
-
-            </a>
-
-            <a
-                href="#maisvendidos"
-                class="btn btn-secundario">
-
-                Mais vendidos
-
-            </a>
+            <a href="#categorias" class="btn btn-principal">Explorar categorias</a>
+            <a href="#maisvendidos" class="btn btn-secundario">Mais vendidos</a>
 
         </div>
 
@@ -166,245 +105,158 @@ HERO
 CATEGORIAS
 ====================================================== -->
 
-<section
-id="categorias"
-class="secao">
+<section id="categorias" class="secao">
 
-<h2>
-
-Categorias
-
-</h2>
+<h2>Categorias</h2>
 
 <p class="subtitulo">
-
 Tudo para seu lar,
 do essencial até soluções inteligentes.
-
 </p>
 
 <div class="categorias-grid">
 
-<div class="categoria-card">
+    <div class="categoria-card">
 
-<div class="categoria-icone">
+        <div class="categoria-icone">
 
-<!-- depois entra SVG -->
+            <!-- SVG PRANCHA -->
+            <svg>
+                <use href="images/svg/icons.svg#icon-organizacao"></use>
+            </svg>
 
-🏠
+        </div>
 
-</div>
+        <h3>Organização</h3>
 
-<h3>
+        <p>Organizadores, caixas, armários e acessórios.</p>
 
-Organização
+    </div>
 
-</h3>
+    <div class="categoria-card">
 
-<p>
+        <div class="categoria-icone">
 
-Organizadores,
-caixas,
-armários
-e acessórios.
+            <svg>
+                <use href="images/svg/icons.svg#icon-cozinha"></use>
+            </svg>
 
-</p>
+        </div>
 
-</div>
+        <h3>Cozinha</h3>
 
-<div class="categoria-card">
+        <p>Panelas, Air Fryers, utensílios e acessórios.</p>
 
-<div class="categoria-icone">
+    </div>
 
-🍳
+    <div class="categoria-card">
 
-</div>
+        <div class="categoria-icone">
 
-<h3>
+            <svg>
+                <use href="images/svg/icons.svg#icon-iluminacao"></use>
+            </svg>
 
-Cozinha
+        </div>
 
-</h3>
+        <h3>Iluminação</h3>
 
-<p>
+        <p>LED, luminárias e automação.</p>
 
-Panelas,
-Air Fryers,
-utensílios
-e acessórios.
+    </div>
 
-</p>
+    <div class="categoria-card">
 
-</div>
+        <div class="categoria-icone">
 
-<div class="categoria-card">
+            <svg>
+                <use href="images/svg/icons.svg#icon-casa-inteligente"></use>
+            </svg>
 
-<div class="categoria-icone">
+        </div>
 
-💡
+        <h3>Casa Inteligente</h3>
 
-</div>
+        <p>Tomadas, sensores, câmeras e automação.</p>
 
-<h3>
+    </div>
 
-Iluminação
+    <div class="categoria-card">
 
-</h3>
+        <div class="categoria-icone">
 
-<p>
+            <svg>
+                <use href="images/svg/icons.svg#icon-limpeza"></use>
+            </svg>
 
-LED,
-luminárias
-e automação.
+        </div>
 
-</p>
+        <h3>Limpeza</h3>
 
-</div>
+        <p>Produtos para facilitar o dia a dia.</p>
 
-<div class="categoria-card">
+    </div>
 
-<div class="categoria-icone">
+    <div class="categoria-card">
 
-🤖
+        <div class="categoria-icone">
 
-</div>
+            <svg>
+                <use href="images/svg/icons.svg#icon-conforto"></use>
+            </svg>
 
-<h3>
+        </div>
 
-Casa Inteligente
+        <h3>Conforto</h3>
 
-</h3>
+        <p>Itens para deixar seu lar mais agradável.</p>
 
-<p>
-
-Tomadas,
-sensores,
-câmeras
-e automação.
-
-</p>
-
-</div>
-
-<div class="categoria-card">
-
-<div class="categoria-icone">
-
-🧹
-
-</div>
-
-<h3>
-
-Limpeza
-
-</h3>
-
-<p>
-
-Produtos
-para facilitar
-o dia a dia.
-
-</p>
-
-</div>
-
-<div class="categoria-card">
-
-<div class="categoria-icone">
-
-🛋️
-
-</div>
-
-<h3>
-
-Conforto
-
-</h3>
-
-<p>
-
-Itens
-para deixar
-seu lar
-mais agradável.
-
-</p>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
-<!-- =====================================================
+    <!-- =====================================================
 MAIS VENDIDOS
 ====================================================== -->
 
 <section id="maisvendidos" class="secao">
 
-    <h2>
-
-        ⭐ Mais vendidos
-
-    </h2>
+    <h2>⭐ Mais vendidos</h2>
 
     <p class="subtitulo">
-
         Os produtos preferidos pelos consumidores.
-
     </p>
 
     <div class="produtos-grid">
 
         <div class="produto">
-
             <div class="produto-img"></div>
-
             <h3>Produto 1</h3>
-
             <p>Em breve.</p>
-
             <button>Ver produto</button>
-
         </div>
 
         <div class="produto">
-
             <div class="produto-img"></div>
-
             <h3>Produto 2</h3>
-
             <p>Em breve.</p>
-
             <button>Ver produto</button>
-
         </div>
 
         <div class="produto">
-
             <div class="produto-img"></div>
-
             <h3>Produto 3</h3>
-
             <p>Em breve.</p>
-
             <button>Ver produto</button>
-
         </div>
 
         <div class="produto">
-
             <div class="produto-img"></div>
-
             <h3>Produto 4</h3>
-
             <p>Em breve.</p>
-
             <button>Ver produto</button>
-
         </div>
 
     </div>
@@ -417,66 +269,40 @@ MAIS BEM AVALIADOS
 
 <section id="avaliados" class="secao">
 
-    <h2>
-
-        ❤️ Mais bem avaliados
-
-    </h2>
+    <h2>❤️ Mais bem avaliados</h2>
 
     <p class="subtitulo">
-
         Produtos reconhecidos pela qualidade e satisfação dos clientes.
-
     </p>
 
     <div class="produtos-grid">
 
         <div class="produto">
-
             <div class="produto-img"></div>
-
             <h3>Produto 5</h3>
-
             <p>Em breve.</p>
-
             <button>Ver produto</button>
-
         </div>
 
         <div class="produto">
-
             <div class="produto-img"></div>
-
             <h3>Produto 6</h3>
-
             <p>Em breve.</p>
-
             <button>Ver produto</button>
-
         </div>
 
         <div class="produto">
-
             <div class="produto-img"></div>
-
             <h3>Produto 7</h3>
-
             <p>Em breve.</p>
-
             <button>Ver produto</button>
-
         </div>
 
         <div class="produto">
-
             <div class="produto-img"></div>
-
             <h3>Produto 8</h3>
-
             <p>Em breve.</p>
-
             <button>Ver produto</button>
-
         </div>
 
     </div>
@@ -489,17 +315,11 @@ MELHOR CUSTO BENEFÍCIO
 
 <section class="secao destaque">
 
-    <h2>
-
-        💰 Melhor custo-benefício
-
-    </h2>
+    <h2>💰 Melhor custo-benefício</h2>
 
     <p class="subtitulo">
-
         Bons produtos não precisam ser os mais caros.
         Aqui você encontra opções equilibradas entre qualidade e preço.
-
     </p>
 
 </section>
@@ -510,54 +330,26 @@ COMO FUNCIONA
 
 <section class="secao">
 
-    <h2>
-
-        Como funciona
-
-    </h2>
+    <h2>Como funciona</h2>
 
     <div class="passos">
 
         <div class="passo">
-
             <span>1</span>
-
             <h3>Escolha</h3>
-
-            <p>
-
-                Navegue pelas categorias e encontre o produto ideal.
-
-            </p>
-
+            <p>Navegue pelas categorias e encontre o produto ideal.</p>
         </div>
 
         <div class="passo">
-
             <span>2</span>
-
             <h3>Compare</h3>
-
-            <p>
-
-                Veja avaliações, informações e escolha com segurança.
-
-            </p>
-
+            <p>Veja avaliações, informações e escolha com segurança.</p>
         </div>
 
         <div class="passo">
-
             <span>3</span>
-
             <h3>Compre</h3>
-
-            <p>
-
-                Você será direcionado para a loja parceira.
-
-            </p>
-
+            <p>Você será direcionado para a loja parceira.</p>
         </div>
 
     </div>
@@ -570,20 +362,12 @@ LAURINHO
 
 <section id="sobre" class="mascote">
 
-    <img
-        src="images/mascote1.png"
-        alt="Laurinho">
+    <img src="images/mascote1.png" alt="Laurinho">
 
-    <h2>
-
-        Laurinho
-
-    </h2>
+    <h2>Laurinho</h2>
 
     <p>
-
         Seu guia para encontrar produtos que realmente fazem sentido para sua casa.
-
     </p>
 
 </section>
@@ -595,40 +379,25 @@ RODAPÉ
 <footer>
 
     <div class="footer-logo">
-
-        <img
-            src="images/logo.png"
-            alt="Larium"
-            class="footer-logo-img">
-
+        <img src="images/logo.png" alt="Larium" class="footer-logo-img">
     </div>
 
-    <p>
-
-        Um único lar, tudo em um só lugar.
-
-    </p>
+    <p>Um único lar, tudo em um só lugar.</p>
 
     <div class="footer-links">
-
         <a href="#">Contato</a>
-
         <a href="#">Privacidade</a>
-
         <a href="#">Termos</a>
-
     </div>
 
     <p class="copyright">
-
         © 2026 Larium. Todos os direitos reservados.
-
     </p>
 
 </footer>
 
 <!-- =====================================================
-TEXTO ROTATIVO
+SCRIPT
 ====================================================== -->
 
 <script>
@@ -644,14 +413,12 @@ setInterval(() => {
     indice++;
 
     if(indice >= frases.length){
-
         indice = 0;
-
     }
 
     frases[indice].classList.add("ativa");
 
-},3500);
+}, 3500);
 
 </script>
 
