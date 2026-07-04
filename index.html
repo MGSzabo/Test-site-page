@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,46 +11,95 @@
         content="Descubra produtos para organização, cozinha, iluminação, limpeza, decoração e casa inteligente.">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<!-- =====================================================
-HEADER
-====================================================== -->
+<!-- ================= SVG SPRITE ================= -->
+<svg style="display:none">
+
+    <symbol id="icon-organizacao" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="3"></rect>
+    </symbol>
+
+    <symbol id="icon-cozinha" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="7"></circle>
+    </symbol>
+
+    <symbol id="icon-iluminacao" viewBox="0 0 24 24">
+        <path d="M12 2v20"></path>
+    </symbol>
+
+    <symbol id="icon-casa-inteligente" viewBox="0 0 24 24">
+        <path d="M4 12h16"></path>
+    </symbol>
+
+    <symbol id="icon-limpeza" viewBox="0 0 24 24">
+        <rect x="5" y="5" width="14" height="14"></rect>
+    </symbol>
+
+    <symbol id="icon-conforto" viewBox="0 0 24 24">
+        <path d="M3 18h18"></path>
+    </symbol>
+
+    <symbol id="icon-carrinho" viewBox="0 0 24 24">
+        <path d="M6 6h15l-2 9H8z"></path>
+    </symbol>
+
+    <symbol id="icon-coracao" viewBox="0 0 24 24">
+        <path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z"></path>
+    </symbol>
+
+    <symbol id="icon-escolha" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="6"></circle>
+    </symbol>
+
+    <symbol id="icon-comparar" viewBox="0 0 24 24">
+        <path d="M7 4v16M17 4v16"></path>
+    </symbol>
+
+    <symbol id="icon-compra" viewBox="0 0 24 24">
+        <path d="M4 7h16v10H4z"></path>
+    </symbol>
+
+    <symbol id="icon-contato" viewBox="0 0 24 24">
+        <path d="M4 4h16v16H4z"></path>
+    </symbol>
+
+    <symbol id="icon-privacidade" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5"></circle>
+    </symbol>
+
+    <symbol id="icon-termos" viewBox="0 0 24 24">
+        <path d="M6 6h12v12H6z"></path>
+    </symbol>
+
+</svg>
+
+<!-- ================= HEADER ================= -->
 
 <header class="header">
 
     <a href="#inicio" class="logo">
-
         <img src="images/logo.png" alt="Larium">
-
     </a>
 
     <nav>
-
         <a href="#categorias">Categorias</a>
         <a href="#maisvendidos">Mais vendidos</a>
         <a href="#avaliados">Mais avaliados</a>
         <a href="#sobre">Laurinho</a>
-
     </nav>
 
 </header>
 
-<!-- =====================================================
-HERO
-====================================================== -->
+<!-- ================= HERO ================= -->
 
 <section id="inicio" class="hero">
 
     <picture>
-
         <source media="(max-width:768px)" srcset="images/hero-mobile.png">
-
-        <img src="images/hero.png" alt="" class="hero-bg">
-
+        <img src="images/hero.png" class="hero-bg" alt="">
     </picture>
 
     <div class="hero-overlay"></div>
@@ -59,14 +107,10 @@ HERO
     <div class="hero-content">
 
         <h1>
-
-            <img src="images/logo.png" alt="Larium" class="hero-logo">
-
+            <img src="images/logo.png" class="hero-logo" alt="Larium">
         </h1>
 
-        <h2 class="slogan">
-            Um único lar, tudo em um só lugar.
-        </h2>
+        <h2 class="slogan">Um único lar, tudo em um só lugar.</h2>
 
         <div class="texto-rotativo">
 
@@ -101,7 +145,83 @@ HERO
 
 </section>
 
-<!-- =====================================================
+<!-- ================= CATEGORIAS ================= -->
+
+<section id="categorias" class="secao">
+
+<h2>Categorias</h2>
+
+<p class="subtitulo">
+Tudo para seu lar, do essencial até soluções inteligentes.
+</p>
+
+<div class="categorias-grid">
+
+    <div class="categoria-card">
+        <svg class="categoria-icone"><use href="#icon-organizacao"></use></svg>
+        <h3>Organização</h3>
+        <p>Organizadores, caixas, armários e acessórios.</p>
+    </div>
+
+    <div class="categoria-card">
+        <svg class="categoria-icone"><use href="#icon-cozinha"></use></svg>
+        <h3>Cozinha</h3>
+        <p>Panelas, Air Fryers, utensílios e acessórios.</p>
+    </div>
+
+    <div class="categoria-card">
+        <svg class="categoria-icone"><use href="#icon-iluminacao"></use></svg>
+        <h3>Iluminação</h3>
+        <p>LED, luminárias e automação.</p>
+    </div>
+
+    <div class="categoria-card">
+        <svg class="categoria-icone"><use href="#icon-casa-inteligente"></use></svg>
+        <h3>Casa Inteligente</h3>
+        <p>Tomadas, sensores, câmeras e automação.</p>
+    </div>
+
+    <div class="categoria-card">
+        <svg class="categoria-icone"><use href="#icon-limpeza"></use></svg>
+        <h3>Limpeza</h3>
+        <p>Produtos para facilitar o dia a dia.</p>
+    </div>
+
+    <div class="categoria-card">
+        <svg class="categoria-icone"><use href="#icon-conforto"></use></svg>
+        <h3>Conforto</h3>
+        <p>Itens para deixar seu lar mais agradável.</p>
+    </div>
+
+</div>
+
+</section>
+
+<!-- ================= PRODUTOS (INÍCIO) ================= -->
+
+<section id="maisvendidos" class="secao">
+
+<h2>⭐ Mais vendidos</h2>
+
+<p class="subtitulo">Os produtos preferidos pelos consumidores.</p>
+
+<div class="produtos-grid">
+
+    <div class="produto">
+        <div class="produto-img"></div>
+        <h3>Produto 1</h3>
+        <p>Em breve.</p>
+        <button><svg><use href="#icon-carrinho"></use></svg> Ver produto</button>
+    </div>
+
+    <div class="produto">
+        <div class="produto-img"></div>
+        <h3>Produto 2</h3>
+        <p>Em breve.</p>
+        <button><svg><use href="#icon-carrinho"></use></svg> Ver produto</button>
+    </div>
+
+    <!-- =====================================================
 CATEGORIAS
 ====================================================== -->
 
@@ -116,150 +236,117 @@ do essencial até soluções inteligentes.
 
 <div class="categorias-grid">
 
-    <div class="categoria-card">
+<div class="categoria-card">
 
-        <div class="categoria-icone">
+<div class="categoria-icone">
+<svg class="icon"><use href="#icon-home"></use></svg>
+</div>
 
-            <!-- SVG PRANCHA -->
-            <svg>
-                <use href="images/svg/icons.svg#icon-organizacao"></use>
-            </svg>
+<h3>Organização</h3>
+<p>Organizadores, caixas, armários e acessórios.</p>
 
-        </div>
+</div>
 
-        <h3>Organização</h3>
+<div class="categoria-card">
 
-        <p>Organizadores, caixas, armários e acessórios.</p>
+<div class="categoria-icone">
+<svg class="icon"><use href="#icon-kitchen"></use></svg>
+</div>
 
-    </div>
+<h3>Cozinha</h3>
+<p>Panelas, Air Fryers, utensílios e acessórios.</p>
 
-    <div class="categoria-card">
+</div>
 
-        <div class="categoria-icone">
+<div class="categoria-card">
 
-            <svg>
-                <use href="images/svg/icons.svg#icon-cozinha"></use>
-            </svg>
+<div class="categoria-icone">
+<svg class="icon"><use href="#icon-light"></use></svg>
+</div>
 
-        </div>
+<h3>Iluminação</h3>
+<p>LED, luminárias e automação.</p>
 
-        <h3>Cozinha</h3>
+</div>
 
-        <p>Panelas, Air Fryers, utensílios e acessórios.</p>
+<div class="categoria-card">
 
-    </div>
+<div class="categoria-icone">
+<svg class="icon"><use href="#icon-smart"></use></svg>
+</div>
 
-    <div class="categoria-card">
+<h3>Casa Inteligente</h3>
+<p>Tomadas, sensores, câmeras e automação.</p>
 
-        <div class="categoria-icone">
+</div>
 
-            <svg>
-                <use href="images/svg/icons.svg#icon-iluminacao"></use>
-            </svg>
+<div class="categoria-card">
 
-        </div>
+<div class="categoria-icone">
+<svg class="icon"><use href="#icon-clean"></use></svg>
+</div>
 
-        <h3>Iluminação</h3>
+<h3>Limpeza</h3>
+<p>Produtos para facilitar o dia a dia.</p>
 
-        <p>LED, luminárias e automação.</p>
+</div>
 
-    </div>
+<div class="categoria-card">
 
-    <div class="categoria-card">
+<div class="categoria-icone">
+<svg class="icon"><use href="#icon-comfort"></use></svg>
+</div>
 
-        <div class="categoria-icone">
+<h3>Conforto</h3>
+<p>Itens para deixar seu lar mais agradável.</p>
 
-            <svg>
-                <use href="images/svg/icons.svg#icon-casa-inteligente"></use>
-            </svg>
-
-        </div>
-
-        <h3>Casa Inteligente</h3>
-
-        <p>Tomadas, sensores, câmeras e automação.</p>
-
-    </div>
-
-    <div class="categoria-card">
-
-        <div class="categoria-icone">
-
-            <svg>
-                <use href="images/svg/icons.svg#icon-limpeza"></use>
-            </svg>
-
-        </div>
-
-        <h3>Limpeza</h3>
-
-        <p>Produtos para facilitar o dia a dia.</p>
-
-    </div>
-
-    <div class="categoria-card">
-
-        <div class="categoria-icone">
-
-            <svg>
-                <use href="images/svg/icons.svg#icon-conforto"></use>
-            </svg>
-
-        </div>
-
-        <h3>Conforto</h3>
-
-        <p>Itens para deixar seu lar mais agradável.</p>
-
-    </div>
+</div>
 
 </div>
 
 </section>
 
-    <!-- =====================================================
+<!-- =====================================================
 MAIS VENDIDOS
 ====================================================== -->
 
 <section id="maisvendidos" class="secao">
 
-    <h2>⭐ Mais vendidos</h2>
+<h2>⭐ Mais vendidos</h2>
 
-    <p class="subtitulo">
-        Os produtos preferidos pelos consumidores.
-    </p>
+<p class="subtitulo">Os produtos preferidos pelos consumidores.</p>
 
-    <div class="produtos-grid">
+<div class="produtos-grid">
 
-        <div class="produto">
-            <div class="produto-img"></div>
-            <h3>Produto 1</h3>
-            <p>Em breve.</p>
-            <button>Ver produto</button>
-        </div>
+<div class="produto">
+<div class="produto-img"></div>
+<h3>Produto 1</h3>
+<p>Em breve.</p>
+<button>Ver produto</button>
+</div>
 
-        <div class="produto">
-            <div class="produto-img"></div>
-            <h3>Produto 2</h3>
-            <p>Em breve.</p>
-            <button>Ver produto</button>
-        </div>
+<div class="produto">
+<div class="produto-img"></div>
+<h3>Produto 2</h3>
+<p>Em breve.</p>
+<button>Ver produto</button>
+</div>
 
-        <div class="produto">
-            <div class="produto-img"></div>
-            <h3>Produto 3</h3>
-            <p>Em breve.</p>
-            <button>Ver produto</button>
-        </div>
+<div class="produto">
+<div class="produto-img"></div>
+<h3>Produto 3</h3>
+<p>Em breve.</p>
+<button>Ver produto</button>
+</div>
 
-        <div class="produto">
-            <div class="produto-img"></div>
-            <h3>Produto 4</h3>
-            <p>Em breve.</p>
-            <button>Ver produto</button>
-        </div>
+<div class="produto">
+<div class="produto-img"></div>
+<h3>Produto 4</h3>
+<p>Em breve.</p>
+<button>Ver produto</button>
+</div>
 
-    </div>
+</div>
 
 </section>
 
@@ -269,43 +356,43 @@ MAIS BEM AVALIADOS
 
 <section id="avaliados" class="secao">
 
-    <h2>❤️ Mais bem avaliados</h2>
+<h2>❤️ Mais bem avaliados</h2>
 
-    <p class="subtitulo">
-        Produtos reconhecidos pela qualidade e satisfação dos clientes.
-    </p>
+<p class="subtitulo">
+Produtos reconhecidos pela qualidade e satisfação dos clientes.
+</p>
 
-    <div class="produtos-grid">
+<div class="produtos-grid">
 
-        <div class="produto">
-            <div class="produto-img"></div>
-            <h3>Produto 5</h3>
-            <p>Em breve.</p>
-            <button>Ver produto</button>
-        </div>
+<div class="produto">
+<div class="produto-img"></div>
+<h3>Produto 5</h3>
+<p>Em breve.</p>
+<button>Ver produto</button>
+</div>
 
-        <div class="produto">
-            <div class="produto-img"></div>
-            <h3>Produto 6</h3>
-            <p>Em breve.</p>
-            <button>Ver produto</button>
-        </div>
+<div class="produto">
+<div class="produto-img"></div>
+<h3>Produto 6</h3>
+<p>Em breve.</p>
+<button>Ver produto</button>
+</div>
 
-        <div class="produto">
-            <div class="produto-img"></div>
-            <h3>Produto 7</h3>
-            <p>Em breve.</p>
-            <button>Ver produto</button>
-        </div>
+<div class="produto">
+<div class="produto-img"></div>
+<h3>Produto 7</h3>
+<p>Em breve.</p>
+<button>Ver produto</button>
+</div>
 
-        <div class="produto">
-            <div class="produto-img"></div>
-            <h3>Produto 8</h3>
-            <p>Em breve.</p>
-            <button>Ver produto</button>
-        </div>
+<div class="produto">
+<div class="produto-img"></div>
+<h3>Produto 8</h3>
+<p>Em breve.</p>
+<button>Ver produto</button>
+</div>
 
-    </div>
+</div>
 
 </section>
 
@@ -315,12 +402,12 @@ MELHOR CUSTO BENEFÍCIO
 
 <section class="secao destaque">
 
-    <h2>💰 Melhor custo-benefício</h2>
+<h2>💰 Melhor custo-benefício</h2>
 
-    <p class="subtitulo">
-        Bons produtos não precisam ser os mais caros.
-        Aqui você encontra opções equilibradas entre qualidade e preço.
-    </p>
+<p class="subtitulo">
+Bons produtos não precisam ser os mais caros.
+Aqui você encontra opções equilibradas entre qualidade e preço.
+</p>
 
 </section>
 
@@ -330,29 +417,29 @@ COMO FUNCIONA
 
 <section class="secao">
 
-    <h2>Como funciona</h2>
+<h2>Como funciona</h2>
 
-    <div class="passos">
+<div class="passos">
 
-        <div class="passo">
-            <span>1</span>
-            <h3>Escolha</h3>
-            <p>Navegue pelas categorias e encontre o produto ideal.</p>
-        </div>
+<div class="passo">
+<span>1</span>
+<h3>Escolha</h3>
+<p>Navegue pelas categorias e encontre o produto ideal.</p>
+</div>
 
-        <div class="passo">
-            <span>2</span>
-            <h3>Compare</h3>
-            <p>Veja avaliações, informações e escolha com segurança.</p>
-        </div>
+<div class="passo">
+<span>2</span>
+<h3>Compare</h3>
+<p>Veja avaliações, informações e escolha com segurança.</p>
+</div>
 
-        <div class="passo">
-            <span>3</span>
-            <h3>Compre</h3>
-            <p>Você será direcionado para a loja parceira.</p>
-        </div>
+<div class="passo">
+<span>3</span>
+<h3>Compre</h3>
+<p>Você será direcionado para a loja parceira.</p>
+</div>
 
-    </div>
+</div>
 
 </section>
 
@@ -362,13 +449,13 @@ LAURINHO
 
 <section id="sobre" class="mascote">
 
-    <img src="images/mascote1.png" alt="Laurinho">
+<img src="images/mascote1.png" alt="Laurinho">
 
-    <h2>Laurinho</h2>
+<h2>Laurinho</h2>
 
-    <p>
-        Seu guia para encontrar produtos que realmente fazem sentido para sua casa.
-    </p>
+<p>
+Seu guia para encontrar produtos que realmente fazem sentido para sua casa.
+</p>
 
 </section>
 
@@ -378,49 +465,55 @@ RODAPÉ
 
 <footer>
 
-    <div class="footer-logo">
-        <img src="images/logo.png" alt="Larium" class="footer-logo-img">
-    </div>
+<div class="footer-logo">
+<img src="images/logo.png" alt="Larium" class="footer-logo-img">
+</div>
 
-    <p>Um único lar, tudo em um só lugar.</p>
+<p>Um único lar, tudo em um só lugar.</p>
 
-    <div class="footer-links">
-        <a href="#">Contato</a>
-        <a href="#">Privacidade</a>
-        <a href="#">Termos</a>
-    </div>
+<div class="footer-links">
+<a href="#">Contato</a>
+<a href="#">Privacidade</a>
+<a href="#">Termos</a>
+</div>
 
-    <p class="copyright">
-        © 2026 Larium. Todos os direitos reservados.
-    </p>
+<p class="copyright">
+© 2026 Larium. Todos os direitos reservados.
+</p>
 
 </footer>
 
 <!-- =====================================================
-SCRIPT
+SVG SPRITE (ICONS)
 ====================================================== -->
 
-<script>
+<svg style="display:none">
 
-const frases = document.querySelectorAll(".frase");
+<symbol id="icon-home" viewBox="0 0 24 24">
+<path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>
+</symbol>
 
-let indice = 0;
+<symbol id="icon-kitchen" viewBox="0 0 24 24">
+<path d="M7 2v20M11 2v20M15 2v20M19 2v20"/>
+</symbol>
 
-setInterval(() => {
+<symbol id="icon-light" viewBox="0 0 24 24">
+<path d="M9 21h6M8 18h8M12 2a6 6 0 0 0-4 10c1 1 2 2 2 4h4c0-2 1-3 2-4a6 6 0 0 0-4-10z"/>
+</symbol>
 
-    frases[indice].classList.remove("ativa");
+<symbol id="icon-smart" viewBox="0 0 24 24">
+<path d="M4 12h16M12 4v16"/>
+</symbol>
 
-    indice++;
+<symbol id="icon-clean" viewBox="0 0 24 24">
+<path d="M3 21h18M6 21V7l6-4 6 4v14"/>
+</symbol>
 
-    if(indice >= frases.length){
-        indice = 0;
-    }
+<symbol id="icon-comfort" viewBox="0 0 24 24">
+<path d="M4 14c3-4 5-4 8 0s5 4 8 0"/>
+</symbol>
 
-    frases[indice].classList.add("ativa");
-
-}, 3500);
-
-</script>
+</svg>
 
 </body>
 </html>
