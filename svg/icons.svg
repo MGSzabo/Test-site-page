@@ -49,30 +49,43 @@
   <symbol id="limpeza" viewBox="0 0 64 64">
   <g fill="none"
      stroke="currentColor"
-     stroke-width="2.2"
+     stroke-width="1.8"
      stroke-linecap="round"
      stroke-linejoin="round">
 
-    <!-- Tampa superior -->
-    <ellipse cx="32" cy="22" rx="18" ry="8"/>
+    <!-- Disco superior -->
+    <ellipse cx="32" cy="21.5" rx="17" ry="7"/>
 
-    <!-- Corpo -->
+    <!-- Corpo lateral -->
     <path d="
-      M14 22
-      V30
-      C14 39 22 46 32 46
-      C42 46 50 39 50 30
-      V22"/>
+      M15 21.5
+      V31
+      C15 40 22.5 47 32 47
+      C41.5 47 49 40 49 31
+      V21.5"/>
 
-    <!-- Base frontal -->
-    <path d="M18 33 C22 36 42 36 46 33"/>
+    <!-- Botão -->
+    <ellipse cx="32" cy="21.5" rx="2.7" ry="1.4"/>
 
-    <!-- Detalhe da abertura -->
-    <path d="M18 30 C20 31 24 31 26 30"/>
-    <path d="M38 30 C40 31 44 31 46 30"/>
+    <!-- Faixa frontal -->
+    <path d="
+      M20 31
+      C24 34 40 34 44 31"/>
 
-    <!-- Botão superior -->
-    <ellipse cx="32" cy="22" rx="3.3" ry="1.7"/>
+    <!-- Aberturas laterais -->
+    <path d="
+      M20.5 28.5
+      C22.5 29.7 25.5 30.1 28 29.5"/>
+
+    <path d="
+      M36 29.5
+      C38.5 30.1 41.5 29.7 43.5 28.5"/>
+
+    <!-- Base -->
+    <path d="
+      M22 41
+      C27 43 37 43 42 41"/>
+
   </g>
 </symbol>
 
