@@ -47,44 +47,34 @@
 
   <!-- LIMPEZA (ASPIRADOR SIMBÓLICO) -->
   <symbol id="limpeza" viewBox="0 0 64 64">
-  <g fill="none"
-     stroke="currentColor"
-     stroke-width="1.8"
-     stroke-linecap="round"
-     stroke-linejoin="round">
+  <g
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.9"
+    stroke-linecap="round"
+    stroke-linejoin="round">
 
-    <!-- Disco superior -->
-    <ellipse cx="32" cy="21.5" rx="17" ry="7"/>
-
-    <!-- Corpo lateral -->
-    <path d="
-      M15 21.5
-      V31
-      C15 40 22.5 47 32 47
-      C41.5 47 49 40 49 31
-      V21.5"/>
+    <!-- Corpo -->
+    <circle cx="32" cy="32" r="19"/>
 
     <!-- Botão -->
-    <ellipse cx="32" cy="21.5" rx="2.7" ry="1.4"/>
+    <circle cx="32" cy="20" r="2.2"/>
 
     <!-- Faixa frontal -->
-    <path d="
-      M20 31
-      C24 34 40 34 44 31"/>
+    <path d="M18 39 Q32 45 46 39"/>
 
-    <!-- Aberturas laterais -->
-    <path d="
-      M20.5 28.5
-      C22.5 29.7 25.5 30.1 28 29.5"/>
+    <!-- Aberturas -->
+    <path d="M21.5 34 Q26 36 30 34"/>
+    <path d="M34 34 Q38 36 42.5 34"/>
 
-    <path d="
-      M36 29.5
-      C38.5 30.1 41.5 29.7 43.5 28.5"/>
+    <!-- Para-choque -->
+    <path d="M18 39
+             Q20 42 23 43
+             Q32 46 41 43
+             Q44 42 46 39"/>
 
-    <!-- Base -->
-    <path d="
-      M22 41
-      C27 43 37 43 42 41"/>
+    <!-- Pequeno recorte superior -->
+    <path d="M25 15 Q32 12 39 15"/>
 
   </g>
 </symbol>
