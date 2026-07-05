@@ -47,45 +47,59 @@
 
   <!-- LIMPEZA (ASPIRADOR SIMBÓLICO) -->
   <symbol id="limpeza" viewBox="0 0 24 24">
-  
-  <!-- corpo principal (base circular maior) -->
-  <circle cx="12" cy="14" r="7"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"/>
 
-  <!-- topo (círculo menor tipo “sensor”/tampa) -->
-  <circle cx="12" cy="9" r="4"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"/>
+  <!-- Corpo principal -->
+  <circle
+      cx="12"
+      cy="13"
+      r="6.2"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"/>
 
-  <!-- sensor central no topo -->
-  <circle cx="12" cy="9" r="1.2"
-          fill="currentColor"/>
+  <!-- Tampa superior -->
+  <path
+      d="M8.4 7.2
+         A6 6 0 0 1 15.6 7.2"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"/>
 
-  <!-- “bumpers” frontais curvados (simulando os dois retângulos curvos) -->
-  <path d="M7 13.5
-           C8.5 12.5, 10 12.5, 11 13.5"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"/>
+  <!-- Sensor central -->
+  <circle
+      cx="12"
+      cy="9.2"
+      r="0.8"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.4"/>
 
-  <path d="M13 13.5
-           C14 12.5, 15.5 12.5, 17 13.5"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"/>
+  <!-- Entrada frontal -->
+  <path
+      d="M8.6 17.2
+         Q12 19.1 15.4 17.2"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"/>
 
-  <!-- base inferior destacada -->
-  <path d="M8 18
-           C10 19.5, 14 19.5, 16 18"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"/>
+  <!-- Detalhes laterais -->
+  <path
+      d="M7.7 11.7
+         Q6.9 13 7.4 14.5"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.3"
+      stroke-linecap="round"/>
+
+  <path
+      d="M16.3 11.7
+         Q17.1 13 16.6 14.5"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.3"
+      stroke-linecap="round"/>
 
 </symbol>
 
