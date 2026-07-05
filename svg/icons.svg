@@ -47,19 +47,32 @@
 
   <!-- LIMPEZA (ASPIRADOR SIMBÓLICO) -->
   <symbol id="limpeza" viewBox="0 0 24 24">
-    <circle cx="12" cy="15" r="6"
+  <!-- corpo principal (aspirador robô) -->
+  <circle cx="12" cy="13" r="7"
           fill="none"
           stroke="currentColor"
           stroke-width="2"/>
-    <path d="M10 13h4l1 2h-6z"
+
+  <!-- detalhe interno (sensor / tampa) -->
+  <circle cx="12" cy="13" r="2"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linejoin="round"/>
-    <line x1="12" y1="9" x2="12" y2="6"
-          stroke="currentColor"
           stroke-width="2"/>
-  </symbol>
+
+  <!-- base/sombra inferior -->
+  <path d="M8 20h8"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"/>
+
+  <!-- pequeno “sensor” superior -->
+  <path d="M12 4v2"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"/>
+</symbol>
 
   <!-- CONFORTO -->
   <symbol id="conforto" viewBox="0 0 24 24">
