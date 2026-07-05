@@ -47,45 +47,45 @@
 
   <!-- LIMPEZA (ASPIRADOR SIMBÓLICO) -->
   <symbol id="limpeza" viewBox="0 0 24 24">
-
-  <!-- corpo superior -->
-  <circle cx="12" cy="9" r="5"
+  
+  <!-- corpo principal (base circular maior) -->
+  <circle cx="12" cy="14" r="7"
           fill="none"
           stroke="currentColor"
           stroke-width="2"/>
 
-  <!-- sensor central do topo -->
-  <circle cx="12" cy="9" r="1.5"
+  <!-- topo (círculo menor tipo “sensor”/tampa) -->
+  <circle cx="12" cy="9" r="4"
           fill="none"
           stroke="currentColor"
           stroke-width="2"/>
 
-  <!-- corpo inferior (base maior tipo cilindro) -->
-  <circle cx="12" cy="15" r="7"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"/>
+  <!-- sensor central no topo -->
+  <circle cx="12" cy="9" r="1.2"
+          fill="currentColor"/>
 
-  <!-- “borda de conexão” entre topo e base -->
-  <path d="M9 12.5 Q12 11 15 12.5"
+  <!-- “bumpers” frontais curvados (simulando os dois retângulos curvos) -->
+  <path d="M7 13.5
+           C8.5 12.5, 10 12.5, 11 13.5"
         fill="none"
         stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"/>
 
-  <!-- janela frontal esquerda (curva) -->
-  <path d="M8.5 14c0-1 1-2 2.2-2h0.5c1.2 0 2.2 1 2.2 2
-           c0 1-1 2-2.2 2h-0.5c-1.2 0-2.2-1-2.2-2z"
+  <path d="M13 13.5
+           C14 12.5, 15.5 12.5, 17 13.5"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"/>
+        stroke-width="2"
+        stroke-linecap="round"/>
 
-  <!-- janela frontal direita (curva) -->
-  <path d="M13.5 14c0-1 1-2 2.2-2h0.5c1.2 0 2.2 1 2.2 2
-           c0 1-1 2-2.2 2h-0.5c-1.2 0-2.2-1-2.2-2z"
+  <!-- base inferior destacada -->
+  <path d="M8 18
+           C10 19.5, 14 19.5, 16 18"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"/>
+        stroke-width="2"
+        stroke-linecap="round"/>
 
 </symbol>
 
