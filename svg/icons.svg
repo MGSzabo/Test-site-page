@@ -46,36 +46,73 @@
   </symbol>
 
   <!-- LIMPEZA (ASPIRADOR SIMBÓLICO) -->
-  <symbol id="limpeza" viewBox="0 0 64 64">
-  <g
-    fill="none"
-    stroke="currentColor"
-    stroke-width="1.9"
-    stroke-linecap="round"
-    stroke-linejoin="round">
+  <symbol id="limpeza" viewBox="0 0 256 256">
+  <g fill="none"
+     stroke="currentColor"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round">
 
-    <!-- Corpo -->
-    <circle cx="32" cy="32" r="19"/>
-
-    <!-- Botão -->
-    <circle cx="32" cy="20" r="2.2"/>
-
-    <!-- Faixa frontal -->
-    <path d="M18 39 Q32 45 46 39"/>
-
-    <!-- Aberturas -->
-    <path d="M21.5 34 Q26 36 30 34"/>
-    <path d="M34 34 Q38 36 42.5 34"/>
-
-    <!-- Para-choque -->
-    <path d="M18 39
-             Q20 42 23 43
-             Q32 46 41 43
-             Q44 42 46 39"/>
-
-    <!-- Pequeno recorte superior -->
-    <path d="M25 15 Q32 12 39 15"/>
-
+    <path d="
+M 24 10.5
+L 23 10.5
+L 22.5 10
+L 22 9.5
+L 21.5 9
+L 22 8.5
+L 22.5 8
+L 22 7.5
+L 21 7.5
+L 20.5 8
+L 20.5 9
+L 20.5 10
+L 20 10.5
+L 19.5 10
+L 19 9.5
+L 18 9.5
+L 17.5 9
+L 17 8.5
+L 16.5 9
+L 16 9.5
+L 15.5 10
+L 15 10.5
+L 14 11
+L 14 12
+L 14 13
+L 14.5 14
+L 15 15
+L 16 16
+L 17 17
+L 18 18
+L 19 19
+L 20 20
+L 21 21
+L 22 22
+L 23 23
+L 24 24
+L 25 25
+L 26 26
+L 27 27
+L 28 28
+L 29 29
+L 30 30
+L 31 31
+L 32 32
+L 33 33
+L 34 34
+L 35 35
+L 36 36
+L 37 37
+L 38 38
+L 39 39
+L 40 40
+L 41 41
+L 42 42
+L 43 43
+L 44 44
+L 45 45
+L 46 46
+Z"/>
   </g>
 </symbol>
 
