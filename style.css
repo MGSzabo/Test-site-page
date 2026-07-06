@@ -1,4 +1,4 @@
-jo/* =====================================================
+/* =====================================================
    STYLE.CSS - LARIUM
 ===================================================== */
 
@@ -12,6 +12,7 @@ jo/* =====================================================
 
 html{
     scroll-behavior:smooth;
+   
 }
 
 body{
@@ -132,7 +133,7 @@ section{
 
 .logo img{
 
-    width:80%;
+    width:100%;
     max-width:220px;
     height:auto;
 
@@ -229,7 +230,7 @@ nav a:hover::after{
 
 .hero{
 
-    position:relative;
+   position:relative;
 
     min-height:65vh;
 
@@ -1010,29 +1011,45 @@ footer{
 
     .header{
 
-        flex-direction:column;
+    display:flex;
 
-        justify-content:center;
+    flex-direction:row;
 
-        height:auto;
+    justify-content:space-between;
 
-        padding:18px;
+    align-items:flex-start;
 
-        gap:18px;
+    padding:16px;
 
-    }
+    gap:12px;
+
+}
+
+   .header-direita{
+
+    flex:0;
+
+    width:auto;
+
+    align-items:flex-end;
+
+}
+   
 
     .logo{
+    justify-content:flex-start;
+       
+    flex:1;
+       
+    min-width:0;
+}
 
-        justify-content:center;
-
-    }
-
+}
     .logo img{
 
         width:100%;
 
-        max-width:420px;
+        max-width:180px;
 
         height:auto;
 
@@ -1040,15 +1057,11 @@ footer{
 
     nav{
 
-        width:100%;
+    width:auto;
 
-        justify-content:center;
+    align-items:flex-end;
 
-        flex-wrap:wrap;
-
-        gap:10px;
-
-    }
+}
 
     nav a{
 
@@ -1070,7 +1083,7 @@ footer{
 
         margin:0;
 
-        padding-top:180px;
+        padding-top:40px;
 
         align-items:center;
 
@@ -1144,7 +1157,7 @@ footer{
 
         width:100%;
 
-        max-width:420px;
+        max-width:180px;
 
         height:auto;
 
@@ -1209,5 +1222,9 @@ footer{
         gap:10px;
 
     }
-
+   
+*{
+    outline:1px solid red;
+}
+   
 }
