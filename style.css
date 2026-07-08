@@ -1,1230 +1,1131 @@
 /* =====================================================
-   STYLE.CSS - LARIUM
+STYLE.CSS - LARIUM
+===================================================== */
+
+/* =====================================================
+==> CONFIGURAÇÕES GERAIS (TODOS OS DISPOSITIVOS)
+Esta parte vale para Desktop, Notebook, Tablet e Mobile.
 ===================================================== */
 
 /* ================= RESET ================= */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
-   
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f8fb;
-    color:#243443;
-    overflow-x:hidden;
-    line-height:1.6;
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f8fb;
+color:#243443;
+overflow-x:hidden;
+line-height:1.6;
 }
 
-/* ================= CORES ================= */
+/* ================= VARIÁVEIS ================= */
 
 :root{
 
-    --azul:#1788d6;
-    --azulEscuro:#1168a5;
+--azul:#1788d6;  
+--azulEscuro:#1168a5;  
 
-    --verde:#2dbb63;
-    --verdeEscuro:#219653;
+--verde:#2dbb63;  
+--verdeEscuro:#219653;  
 
-    --texto:#243443;
-    --textoClaro:#6b7a89;
+--texto:#243443;  
+--textoClaro:#6b7a89;  
 
-    --branco:#ffffff;
-    --cinza:#eef3f7;
+--branco:#ffffff;  
+--cinza:#eef3f7;  
 
-    --sombra:0 12px 35px rgba(0,0,0,.08);
+--sombra:0 12px 35px rgba(0,0,0,.08);  
 
-    --borda:18px;
+--borda:18px;
 
 }
 
-/* ================= GERAL ================= */
+/* ================= CONFIGURAÇÕES GERAIS ================= */
 
 img{
-    max-width:100%;
-    display:block;
+max-width:100%;
+display:block;
 }
 
 a{
-    text-decoration:none;
+text-decoration:none;
 }
 
 section{
-    scroll-margin-top:90px;
+scroll-margin-top:90px;
 }
 
 /* =====================================================
-   HEADER
+==> HEADER
 ===================================================== */
 
 .header{
 
-    position:relative;
+position:relative;  
 
-    top:0;
-    left:0;
+top:0;  
+left:0;  
 
-    width:100%;
-    min-height:95px;
+width:100%;  
+min-height:95px;  
 
-    padding:10px 7%;
+padding:10px 7%;  
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+display:flex;  
+ 
+justify-content:space-between;  
+ 
+align-items:center;  
 
-    background:rgba(45,187,99,.18);
+min-height:140px;  
 
-    backdrop-filter:blur(14px);
+background:rgba(45,187,99,.18);  
 
-    box-shadow:0 4px 18px rgba(0,0,0,.08);
+backdrop-filter:blur(14px);  
 
-    transition:.35s;
+box-shadow:0 4px 18px rgba(0,0,0,.08);  
 
-    z-index:9999;
+transition:.35s;  
+
+z-index:9999;
 
 }
 
 .header{
-    align-items: stretch;
+align-items:stretch;
 }
 
-/* cria duas colunas reais */
+/* ================= COLUNA DIREITA ================= */
 .header-direita{
-    display:flex;
-    align-items:flex-start;
-    justify-content:flex-end;
-    flex:1;
-}
+position:relative;
 
-/* menu em coluna */
+z-index:2;
+
+display:flex;
+
+flex:1;
+
+justify-content:flex-end;
+
+align-items:flex-start;
+
+margin-left:auto;
+}
+/* ================= MENU AUXILIAR ================= */
 .menu{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-end;
-    gap:4px;
-}
+display:flex;
 
-/* melhora espaçamento das opções */
+flex-direction:column;
+
+align-items:flex-end;
+
+gap:4px;
+}
 .menu a{
-    font-size:18px;
-    font-weight:600;
-    flex-shrink:0;
-}
+font-size:18px;
 
+font-weight:600;
+
+flex-shrink:0;
+}
 /* ================= LOGO ================= */
+.logo{ position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); z-index:1;
+display:block;
 
-.logo{
-
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    min-width:0;
-    flex:1;
-
+pointer-events:none;
 }
-
 .logo img{
+height:100%;
+width:auto;
+max-height:100%;
 
-    width:100%;
-    max-width:220px;
-    height:auto;
+object-fit:contain;
 
-    object-fit:contain;
+pointer-events:none;
 
-    transition:.35s;
-
+transition:transform .3s ease;
 }
-
 .logo img:hover{
-
-    transform:scale(1.05);
-
+transform:scale(1.05);
 }
-
-/* ================= MENU ================= */
-
+/* ================= MENU PRINCIPAL ================= */
 nav{
+position:relative;
 
-    display:flex;
-    flex-direction:column;
+z-index:2;
 
-    align-items:flex-end;
+display:flex;
 
-    gap:12px;
+flex-direction:column;
 
+align-items:flex-end;
+
+gap:12px;
 }
-
 nav a{
+color:var(--azul);
 
-    color:var(--azul);
+font-size:15px;
 
-    font-size:15px;
+font-weight:700;
 
-    font-weight:700;
+letter-spacing:.2px;
 
-    letter-spacing:.2px;
+padding:6px 14px;
 
-    padding:6px 14px;
+border-radius:999px;
 
-    border-radius:999px;
+position:relative;
 
-    position:relative;
+transition:.35s;
 
-    transition:.35s;
-
-    text-shadow:0 1px 2px rgba(0,0,0,.18);
-
+text-shadow:0 1px 2px rgba(0,0,0,.18);
 }
-
 nav a::after{
+content:"";
 
-    content:"";
+position:absolute;
 
-    position:absolute;
+left:16px;
+right:16px;
+bottom:7px;
 
-    left:16px;
-    right:16px;
-    bottom:7px;
+height:2px;
 
-    height:2px;
+background:linear-gradient(
+    90deg,
+    var(--azul),
+    var(--verde)
+);
 
-    background:linear-gradient(
-        90deg,
-        var(--azul),
-        var(--verde)
-    );
+transform:scaleX(0);
 
-    transform:scaleX(0);
+transform-origin:center;
 
-    transform-origin:center;
-
-    transition:.35s;
-
+transition:.35s;
 }
-
 nav a:hover{
+background:rgba(255,255,255,.16);
 
-    background:rgba(255,255,255,.16);
-
-    color:#fff;
-
+color:#fff;
 }
-
 nav a:hover::after{
-
-    transform:scaleX(1);
-
+transform:scaleX(1);
 }
 
 /* =====================================================
-   HERO
+==> HERO
 ===================================================== */
 
 .hero{
 
-   position:relative;
+position:relative;  
 
-    min-height:65vh;
+min-height:65vh;  
 
-    display:flex;
+display:flex;  
 
-    justify-content:flex-start;
+justify-content:flex-start;  
 
-    align-items:flex-start;
+align-items:flex-start;  
 
-    overflow:hidden;
+overflow:hidden;
 
 }
 
 .hero picture{
 
-    position:absolute;
+position:absolute;  
 
-    inset:0;
+inset:0;  
 
-    width:100%;
-    height:100%;
+width:100%;  
+height:100%;
 
 }
 
 .hero-bg{
 
-    width:100%;
-    height:100%;
+width:100%;  
+height:100%;  
 
-    object-fit:cover;
+object-fit:cover;  
 
-    object-position:center;
+object-position:center;
 
 }
 
 .hero-overlay{
 
-    position:absolute;
+position:absolute;  
 
-    inset:0;
+inset:0;  
 
-    background:linear-gradient(
-        rgba(255,255,255,.56),
-        rgba(255,255,255,.78)
-    );
+background:linear-gradient(  
+    rgba(255,255,255,.56),  
+    rgba(255,255,255,.78)  
+);
 
 }
 
 /* =====================================================
-   HERO CONTENT
+==> CONTEÚDO DO HERO
 ===================================================== */
 
 .hero-content{
 
-    position:relative;
+position:relative;  
 
-    z-index:2;
+z-index:2;  
 
-    width:min(760px,92%);
+width:min(760px,92%);  
 
-    margin-left:7%;
+margin-left:7%;  
 
-    padding-top:20px;
+padding-top:210px;  
 
-    display:flex;
+display:flex;  
 
-    flex-direction:column;
+flex-direction:column;  
 
-   justify-content:flex-start;
+justify-content:flex-start;  
 
-    align-items:flex-start;
+align-items:flex-start;  
 
-    text-align:left;
-
-}
-
-/* Logo do Hero ocultado.
-   Vamos trabalhar somente com o cabeçalho. */
-
-.hero-logo{
-
-    display:none;
+text-align:center;
 
 }
 
 .slogan{
 
-    font-size:45px;
+font-size:55px;  
 
-    line-height:1.35;
+line-height:1.35;  
 
-    font-weight:800;
+font-weight:800;  
 
-    color:#263746;
+color:#ffffff;  
 
-    margin-bottom:28px;
+margin-bottom:40px;  
 
-    max-width:620px;
+max-width:620px;
 
 }
 
+/* ================= BRILHO SUAVE NOS TÍTULOS ================= */
+
+.slogan,
+.secao h2{
+
+color:#ffffff;
+
+text-shadow:
+0 1px 2px rgba(255,255,255,.35),
+0 0 6px rgba(23,136,214,.10);
+
+animation:holofote 6s ease-in-out infinite alternate;
+
+}
+
+@keyframes holofote{
+
+ 0%{
+text-shadow:
+0 1px 2px rgba(255,255,255,.35),
+0 0 8px rgba(23,136,214,.30);
+}
+
+50%{
+text-shadow:
+0 1px 2px rgba(255,255,255,.35),
+0 0 18px rgba(23,136,214,.85),
+0 0 28px rgba(45,187,99,.75);
+}
+
+100%{
+text-shadow:
+0 1px 2px rgba(255,255,255,.35),
+0 0 8px rgba(45,187,99,.30);
+}
+
+}
 /* =====================================================
-   TEXTO ROTATIVO
+TEXTO ROTATIVO
 ===================================================== */
 
 .texto-rotativo{
-
-    position:relative;
-
-    width:100%;
-
-    min-height:90px;
-
-    margin-bottom:42px;
+position:relative;
+width:100%;
+min-height:90px;
+margin-bottom:42px;
 
 }
 
 .frase{
+position:absolute;
+width:100%;
+left:0;
+top:0;
+ 
+opacity:0;
+transform:translateY(18px);
 
-    position:absolute;
+transition:opacity .8s ease, transform .8s ease;
 
-    width:100%;
+font-size:45px;
+font-weight:700;
+line-height:1.7;
 
-    left:0;
-    top:0;
+white-space:normal;
+word-break:keep-all;
+overflow-wrap:break-word;
 
-    opacity:0;
+text-align:center;
+padding:0 12px;
+box-sizing:border-box;
 
-    transform:translateY(18px);
-
-    transition:
-
-        opacity .8s ease,
-
-        transform .8s ease;
-
-    font-size:35px;
-
-    font-weight:700;
-
-    line-height:1.7;
-
-    pointer-events:none;
-
+pointer-events:none;
 }
 
 .frase.ativa{
+opacity:1;
+transform:translateY(0);
+}
 
-    opacity:1;
-
-    transform:translateY(0);
-
+.frase span{
+display:inline;
+white-space:nowrap;
 }
 
 .azul{
-
-    color:var(--azul);
-
+color:var(--azul);
 }
 
 .verde{
-
-    color:var(--verde);
-
+color:var(--verde);
 }
 
 /* =====================================================
-   BOTÕES
-===================================================== */
-
-.hero-botoes{
-
-    display:flex;
-
-    gap:18px;
-
-    flex-wrap:wrap;
-
-}
-
-.btn{
-
-    display:inline-flex;
-
-    justify-content:center;
-    align-items:center;
-
-    padding:18px 34px;
-
-    border-radius:999px;
-
-    font-weight:700;
-
-    transition:.35s;
-
-    box-shadow:var(--sombra);
-
-}
-
-.btn-principal{
-
-    color:#fff;
-
-    background:linear-gradient(
-        135deg,
-        var(--azul),
-        var(--verde)
-    );
-
-}
-
-.btn-principal:hover{
-
-    transform:translateY(-5px);
-
-}
-
-.btn-secundario{
-
-    background:#fff;
-
-    color:var(--azul);
-
-    border:2px solid var(--azul);
-
-}
-
-.btn-secundario:hover{
-
-    background:var(--azul);
-
-    color:#fff;
-
-}
-
-/* =====================================================
-   SEÇÕES
+--> SEÇÕES GERAIS (Desktop + Mobile) <--
 ===================================================== */
 
 .secao{
 
-    width:min(1250px,92%);
-
-    margin:auto;
-
-    padding:95px 0;
+width:min(1250px,92%);  
+margin:auto;  
+padding:95px 0;
 
 }
 
 .secao h2{
 
-    font-size:42px;
-
-    text-align:center;
-
-    color:#22384a;
-
-    font-weight:800;
-
-    margin-bottom:18px;
-
-    letter-spacing:.3px;
+font-size:42px;  
+text-align:center;  
+color:#22384a;  
+font-weight:800;  
+margin-bottom:18px;  
+letter-spacing:.3px;
 
 }
 
 .subtitulo{
 
-    max-width:760px;
-
-    margin:auto auto 55px;
-
-    text-align:center;
-
-    color:var(--textoClaro);
-
-    font-size:20px;
-
-    line-height:1.7;
+max-width:760px;  
+margin:auto auto 55px;  
+text-align:center;  
+color:var(--textoClaro);  
+font-size:20px;  
+line-height:1.7;
 
 }
 
-/* ================= CATEGORIAS ================= */
+/* =====================================================
+--> CATEGORIAS (Desktop + Mobile) <--
+===================================================== */
 
 .categorias-grid{
 
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-
-    gap:32px;
+display:grid;  
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));  
+gap:32px;
 
 }
 
 .categoria-card{
 
-    background:#ffffff;
+background:#ffffff;  
+border-radius:24px;  
+padding:38px 30px;  
+text-align:center;  
+box-shadow:0 14px 40px rgba(0,0,0,.08);  
+border:1px solid rgba(23,136,214,.08);  
 
-    border-radius:24px;
+display:flex;  
+flex-direction:column;  
+align-items:center;  
 
-    padding:38px 30px;
-
-    text-align:center;
-
-    box-shadow:0 14px 40px rgba(0,0,0,.08);
-
-    border:1px solid rgba(23,136,214,.08);
-
-    transition:.35s;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
+transition:.35s;
 
 }
 
 .categoria-card:hover{
 
-    transform:translateY(-8px);
-
-    box-shadow:0 20px 48px rgba(0,0,0,.12);
+transform:translateY(-8px);  
+box-shadow:0 20px 48px rgba(0,0,0,.12);
 
 }
 
 .categoria-icone{
 
-    width:82px;
+width:82px;  
+height:82px;  
+border-radius:22px;  
 
-    height:82px;
+display:flex;  
+justify-content:center;  
+align-items:center;  
 
-    border-radius:22px;
+margin-bottom:24px;  
 
-    background:linear-gradient(
-        135deg,
-        rgba(23,136,214,.10),
-        rgba(45,187,99,.10)
-    );
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    margin-bottom:24px;
+background:linear-gradient(  
+    135deg,  
+    rgba(23,136,214,.10),  
+    rgba(45,187,99,.10)  
+);
 
 }
 
 .categoria-icone img{
 
-    width:60px;
-
-    height:60px;
-
-    object-fit:contain;
+width:60px;  
+height:60px;  
+object-fit:contain;
 
 }
 
 .categoria-card h3{
 
-    font-size:27px;
-
-    color:var(--azul);
-
-    margin-bottom:14px;
-
-    font-weight:800;
+font-size:27px;  
+color:var(--azul);  
+margin-bottom:14px;  
+font-weight:800;
 
 }
 
 .categoria-card p{
 
-    color:var(--textoClaro);
-
-    font-size:17px;
-
-    line-height:1.8;
+color:var(--textoClaro);  
+font-size:17px;  
+line-height:1.8;
 
 }
 
-/* ================= PRODUTOS ================= */
+/* =====================================================
+--> PRODUTOS (Desktop + Mobile) <--
+===================================================== */
 
 .produtos-grid{
 
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-
-    gap:32px;
+display:grid;  
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));  
+gap:32px;
 
 }
 
 .produto{
 
-    display:flex;
+display:flex;  
+flex-direction:column;  
 
-    flex-direction:column;
+overflow:hidden;  
 
-    overflow:hidden;
+background:#fff;  
+border-radius:22px;  
+border:1px solid rgba(0,0,0,.05);  
 
-    background:#fff;
+box-shadow:0 14px 40px rgba(0,0,0,.08);  
 
-    border-radius:22px;
-
-    border:1px solid rgba(0,0,0,.05);
-
-    box-shadow:0 14px 40px rgba(0,0,0,.08);
-
-    transition:.35s;
+transition:.35s;
 
 }
 
 .produto:hover{
 
-    transform:translateY(-8px);
-
-    box-shadow:0 22px 50px rgba(0,0,0,.12);
+transform:translateY(-8px);  
+box-shadow:0 22px 50px rgba(0,0,0,.12);
 
 }
 
 .produto-img{
 
-    height:240px;
+height:240px;  
 
-    background:linear-gradient(
-        135deg,
-        #d8edf9,
-        #eef9f2
-    );
+display:flex;  
+justify-content:center;  
+align-items:center;  
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+background:linear-gradient(  
+    135deg,  
+    #d8edf9,  
+    #eef9f2  
+);
 
 }
 
 .produto-img::before{
 
-    content:"Imagem do Produto";
-
-    color:#6f7f8d;
-
-    font-size:15px;
+content:"Imagem do Produto";  
+color:#6f7f8d;  
+font-size:15px;
 
 }
 
 .produto h3{
 
-    margin:24px 22px 12px;
-
-    font-size:24px;
-
-    color:#243443;
-
-    font-weight:800;
+margin:24px 22px 12px;  
+font-size:24px;  
+color:#243443;  
+font-weight:800;
 
 }
 
 .produto p{
 
-    margin:0 22px 26px;
-
-    color:var(--textoClaro);
-
-    line-height:1.7;
-
-    flex:1;
+margin:0 22px 26px;  
+color:var(--textoClaro);  
+line-height:1.7;  
+flex:1;
 
 }
 
 .produto button{
 
-    margin:0 22px 24px;
+margin:0 22px 24px;  
+padding:16px;  
 
-    padding:16px;
+border:none;  
+border-radius:999px;  
 
-    border:none;
+cursor:pointer;  
 
-    border-radius:999px;
+color:#fff;  
+font-size:15px;  
+font-weight:700;  
 
-    cursor:pointer;
+background:linear-gradient(  
+    135deg,  
+    var(--azul),  
+    var(--verde)  
+);  
 
-    color:#fff;
-
-    font-size:15px;
-
-    font-weight:700;
-
-    background:linear-gradient(
-        135deg,
-        var(--azul),
-        var(--verde)
-    );
-
-    transition:.35s;
+transition:.35s;
 
 }
 
 .produto button:hover{
 
-    transform:translateY(-3px);
+transform:translateY(-3px);
 
 }
 
-/* ================= DESTAQUE ================= */
+/* =====================================================
+--> DESTAQUE (Desktop + Mobile) <--
+===================================================== */
 
 .destaque{
 
-    background:linear-gradient(
+background:linear-gradient(  
+    135deg,  
+    rgba(23,136,214,.07),  
+    rgba(45,187,99,.08)  
+);  
 
-        135deg,
-
-        rgba(23,136,214,.07),
-
-        rgba(45,187,99,.08)
-
-    );
-
-    border-radius:34px;
-
-    padding:70px 45px;
+border-radius:34px;  
+padding:70px 45px;
 
 }
 
-/* ================= COMO FUNCIONA ================= */
+/* =====================================================
+--> COMO FUNCIONA (Desktop + Mobile) <--
+===================================================== */
 
 .passos{
 
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-
-    gap:32px;
+display:grid;  
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));  
+gap:32px;
 
 }
 
 .passo{
 
-    background:#fff;
+background:#fff;  
+padding:42px 34px;  
 
-    padding:42px 34px;
+border-radius:24px;  
 
-    border-radius:24px;
+text-align:center;  
 
-    text-align:center;
+border:1px solid rgba(0,0,0,.05);  
 
-    border:1px solid rgba(0,0,0,.05);
+box-shadow:0 14px 40px rgba(0,0,0,.08);  
 
-    box-shadow:0 14px 40px rgba(0,0,0,.08);
-
-    transition:.35s;
+transition:.35s;
 
 }
 
 .passo:hover{
 
-    transform:translateY(-8px);
+transform:translateY(-8px);  
 
-    box-shadow:0 22px 50px rgba(0,0,0,.12);
+box-shadow:0 22px 50px rgba(0,0,0,.12);
 
 }
 
 .passo span{
 
-    width:70px;
+width:70px;  
+height:70px;  
 
-    height:70px;
+margin:auto auto 24px;  
 
-    margin:auto auto 24px;
+display:flex;  
+justify-content:center;  
+align-items:center;  
 
-    display:flex;
+border-radius:50%;  
 
-    justify-content:center;
+font-size:30px;  
+font-weight:800;  
 
-    align-items:center;
+color:#fff;  
 
-    border-radius:50%;
-
-    font-size:30px;
-
-    font-weight:800;
-
-    color:#fff;
-
-    background:linear-gradient(
-
-        135deg,
-
-        var(--azul),
-
-        var(--verde)
-
-    );
+background:linear-gradient(  
+    135deg,  
+    var(--azul),  
+    var(--verde)  
+);
 
 }
 
 .passo h3{
 
-    font-size:29px;
+font-size:29px;  
+color:var(--azul);  
 
-    color:var(--azul);
+margin-bottom:16px;  
 
-    margin-bottom:16px;
-
-    font-weight:800;
+font-weight:800;
 
 }
 
 .passo p{
 
-    color:var(--textoClaro);
+color:var(--textoClaro);  
 
-    line-height:1.8;
+line-height:1.8;  
 
-    font-size:17px;
+font-size:17px;
 
 }
 
-
-/* ================= MASCOTE ================= */
+/* =====================================================
+--> MASCOTE (Desktop + Mobile) <--
+===================================================== */
 
 .mascote{
 
-    width:min(960px,92%);
+width:min(960px,92%);  
 
-    margin:90px auto;
+margin:90px auto;  
 
-    padding:70px 40px;
+padding:70px 40px;  
 
-    background:#ffffff;
+background:#fff;  
 
-    border-radius:32px;
+border-radius:32px;  
 
-    box-shadow:0 18px 48px rgba(0,0,0,.08);
+box-shadow:0 18px 48px rgba(0,0,0,.08);  
 
-    text-align:center;
+text-align:center;
 
 }
 
 .mascote img{
 
-    width:185px;
+width:185px;  
 
-    margin:0 auto 28px;
+margin:0 auto 28px;  
 
-    transition:.35s;
+transition:.35s;
 
 }
 
 .mascote img:hover{
 
-    transform:translateY(-6px);
+transform:translateY(-6px);
 
 }
 
 .mascote h2{
 
-    font-size:38px;
+font-size:38px;  
 
-    color:var(--azul);
+color:var(--azul);  
 
-    margin-bottom:18px;
+margin-bottom:18px;  
 
-    font-weight:800;
+font-weight:800;
 
 }
 
 .mascote p{
 
-    max-width:670px;
+max-width:670px;  
 
-    margin:auto;
+margin:auto;  
 
-    color:var(--textoClaro);
+color:var(--textoClaro);  
 
-    font-size:18px;
+font-size:18px;  
 
-    line-height:1.8;
+line-height:1.8;
 
 }
 
-/* ================= FOOTER ================= */
+/* =====================================================
+--> FOOTER (Desktop + Mobile) <--
+===================================================== */
 
 footer{
 
-    margin-top:100px;
+margin-top:100px;  
 
-    background:linear-gradient(
+background:linear-gradient(  
+    135deg,  
+    rgba(23,136,214,.08),  
+    rgba(45,187,99,.10)  
+);  
 
-        135deg,
+border-top:1px solid rgba(0,0,0,.06);  
 
-        rgba(23,136,214,.08),
+text-align:center;  
 
-        rgba(45,187,99,.10)
-
-    );
-
-    border-top:1px solid rgba(0,0,0,.06);
-
-    text-align:center;
-
-    padding:70px 25px 50px;
+padding:70px 25px 50px;
 
 }
 
 .footer-logo{
 
-    display:flex;
+display:flex;  
 
-    justify-content:center;
+justify-content:center;  
 
-    margin-bottom:28px;
+margin-bottom:28px;
 
 }
 
 .footer-logo-img{
 
-    width:150px;
+width:150px;  
 
-    object-fit:contain;
+object-fit:contain;
 
 }
 
 .footer-links{
 
-    display:flex;
+display:flex;  
 
-    justify-content:center;
+justify-content:center;  
+align-items:center;  
 
-    align-items:center;
+flex-wrap:wrap;  
 
-    flex-wrap:wrap;
+gap:18px;  
 
-    gap:18px;
-
-    margin:30px 0;
+margin:30px 0;
 
 }
 
 .footer-links a{
 
-    color:var(--azul);
+color:var(--azul);  
 
-    font-weight:700;
+font-weight:700;  
 
-    padding:10px 18px;
+padding:10px 18px;  
 
-    border-radius:999px;
+border-radius:999px;  
 
-    transition:.35s;
+transition:.35s;
 
 }
 
 .footer-links a:hover{
 
-    background:rgba(23,136,214,.10);
+background:rgba(23,136,214,.10);  
 
-    color:var(--verde);
+color:var(--verde);
 
 }
 
 .copyright{
 
-    margin-top:20px;
+margin-top:20px;  
 
-    color:#6f7f8d;
+color:#6f7f8d;  
 
-    font-size:15px;
+font-size:15px;
 
 }
 
-/* ================= RESPONSIVO ================= */
+/* =====================================================
+--> RESPONSIVO - MOBILE E TABLETS (até 900px) <--
+Todas as regras abaixo substituem as configurações
+gerais quando a largura da tela for igual ou menor
+que 900px.
+===================================================== */
 
 @media (max-width:900px){
 
-    .header{
+/* ================= HEADER ================= */  
 
-    display:flex;
+.header{  
 
-    flex-direction:row;
+    display:flex;  
+    flex-direction:row;  
+    justify-content:space-between;  
+    align-items:flex-start;  
 
-    justify-content:space-between;
+    padding:16px;  
 
-    align-items:flex-start;
+    gap:12px;  
 
-    padding:16px;
+}  
 
-    gap:12px;
+.header-direita{  
+
+    flex:0;  
+    width:auto;  
+
+    align-items:flex-end;  
+
+}  
+
+/* ================= LOGO ================= */  
+
+.logo{  
+
+    display:flex;  
+
+    justify-content:flex-start;  
+
+    flex:1;  
+
+    min-width:0;  
+
+}  
+
+.logo img{  
+
+    width:100%;  
+    max-width:340px;  
+    height:auto;  
+
+}  
+
+/* ================= MENU ================= */  
+
+nav{  
+
+    width:auto;  
+
+    align-items:flex-end;  
+
+}  
+
+nav a{  
+
+    font-size:14px;  
+
+    padding:10px 16px;  
+
+}  
+
+/* ================= HERO ================= */  
+
+.hero{  
+
+    justify-content:center;  
+
+}  
+
+.hero-content{  
+
+    width:92%;  
+
+    margin:0;  
+
+    padding-top:40px;  
+
+    align-items:center;  
+
+    text-align:center;  
+
+}  
+
+.slogan{  
+
+    font-size:55px;  
+
+}  
+
+.hero-botoes{  
+
+    justify-content:center;  
+
+    flex-direction:column;  
+
+    width:100%;  
+
+}  
+
+.btn{  
+
+    width:100%;  
+    max-width:340px;  
+
+}  
+
+/* ================= SEÇÕES ================= */  
+
+.secao h2{  
+
+    font-size:35px;  
+
+}  
+
+.subtitulo{  
+
+    font-size:18px;  
+
+}
 
 }
 
-   .header-direita{
-
-    flex:0;
-
-    width:auto;
-
-    align-items:flex-end;
-
-}
-   
-
-    .logo{
-    justify-content:flex-start;
-       
-    flex:1;
-       
-    min-width:0;
-}
-
-}
-    .logo img{
-
-        width:100%;
-
-        max-width:180px;
-
-        height:auto;
-
-    }
-
-    nav{
-
-    width:auto;
-
-    align-items:flex-end;
-
-}
-
-    nav a{
-
-        font-size:14px;
-
-        padding:10px 16px;
-
-    }
-
-    .hero{
-
-        justify-content:center;
-
-    }
-
-    .hero-content{
-
-        width:92%;
-
-        margin:0;
-
-        padding-top:40px;
-
-        align-items:center;
-
-        text-align:center;
-
-    }
-
-    .slogan{
-
-        font-size:29px;
-
-    }
-
-    .texto-rotativo{
-
-        min-height:120px;
-
-    }
-
-    .frase{
-
-        font-size:22px;
-
-        line-height:1.6;
-
-        text-align:center;
-
-    }
-
-    .hero-botoes{
-
-        justify-content:center;
-
-        flex-direction:column;
-
-        width:100%;
-
-    }
-
-    .btn{
-
-        width:100%;
-
-        max-width:340px;
-
-    }
-
-    .secao h2{
-
-        font-size:35px;
-
-    }
-
-    .subtitulo{
-
-        font-size:18px;
-
-    }
-
-}
+/* =====================================================
+--> RESPONSIVO - CELULARES PEQUENOS (até 600px) <--
+Ajustes específicos para smartphones menores.
+===================================================== */
 
 @media (max-width:600px){
 
-    .header{
+/* ================= HEADER ================= */  
 
-        padding:16px;
+.header{  
 
-    }
+    padding:16px;  
 
-    .logo img{
+}  
 
-        width:100%;
+/* ================= LOGO ================= */  
 
-        max-width:180px;
+.logo img{  
 
-        height:auto;
+    width:100%;  
+    max-width:180px;  
+    height:auto;  
 
-    }
+}  
 
-    .hero-content{
+/* ================= HERO ================= */  
 
-        padding-top:170px;
+.hero-content{  
 
-    }
+    padding-top:170px;  
 
-    .slogan{
+}  
 
-        font-size:24px;
+.slogan{  
 
-    }
+    font-size:24px;  
 
-    .frase{
+}  
 
-        font-size:18px;
+.frase{  
 
-    }
+    font-size:18px;  
 
-    .categoria-card{
+}  
 
-        padding:30px 24px;
+/* ================= CARDS ================= */  
 
-    }
+.categoria-card{  
 
-    .produto-img{
+    padding:30px 24px;  
 
-        height:190px;
+}  
 
-    }
+.produto-img{  
 
-    .passo{
+    height:190px;  
 
-        padding:34px 24px;
+}  
 
-    }
+.passo{  
 
-    .mascote{
+    padding:34px 24px;  
 
-        padding:50px 24px;
+}  
 
-    }
+/* ================= MASCOTE ================= */  
 
-    .mascote img{
+.mascote{  
 
-        width:150px;
+    padding:50px 24px;  
 
-    }
+}  
 
-    .footer-logo-img{
+.mascote img{  
 
-        width:120px;
+    width:150px;  
 
-    }
+}  
 
-    .footer-links{
+/* ================= FOOTER ================= */  
 
-        gap:10px;
+.footer-logo-img{  
 
-    }
-   
+    width:120px;  
+
+}  
+
+.footer-links{  
+
+    gap:10px;  
+
+}
+
+}
+
+/* =====================================================
+--> FERRAMENTA DE DEPURAÇÃO (DEBUG) <--
+Utilize somente durante os testes.
+Comente ou remova antes da publicação.
+===================================================== */
+
+/*
 *{
-    outline:1px solid red;
+outline:1px solid red;
 }
-   
-}
+*/
