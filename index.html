@@ -28,16 +28,15 @@ content="Descubra produtos para organização, cozinha, iluminação, limpeza, c
 
 <header class="header">
 
-<a href="#inicio" class="logo">
-<img src="images/logo.png" alt="LariUm" loading="lazy">
-</a>
-
+<div class="logo">
+    <img src="images/logo.png" alt="LariUm" loading="lazy">
+</div>
 <div class="header-direita">
 
 <nav class="menu">
     <a href="#categorias">Categorias</a>
-    <a href="#maisvendidos">Mais vendidos</a>
-    <a href="#avaliados">Mais avaliados</a>
+    <a href="#+Vendidos">+Vendidos</a>
+    <a href="#+Avaliados">+Avaliados</a>
     <a href="#sobre">Laurinho</a>
 </nav>
 
@@ -67,16 +66,6 @@ loading="lazy">
 
 <div class="hero-content">
 
-<h1>
-
-<img
-src="images/logo.png"
-alt="LariUm"
-class="hero-logo"
-loading="lazy">
-
-</h1>
-
 <h2 class="slogan">
 Um único lar, tudo em um só lugar.
 </h2>
@@ -103,6 +92,7 @@ Um único lar, tudo em um só lugar.
 
 </div>
 
+<!--  
 <div class="hero-botoes">
 
 <a href="#categorias" class="btn btn-principal">
@@ -114,20 +104,34 @@ Mais vendidos
 </a>
 
 </div>
-
+-->
+    
 </div>
-
 </section>
-
+    
   <!-- ================= CATEGORIAS ================= -->
 
 <section id="categorias" class="secao">
 
 <h2>Categorias</h2>
 
-<p class="subtitulo">
-Tudo para seu lar, do essencial até soluções inteligentes.
-</p>
+<div class="texto-rotativo">
+
+    <div class="frase ativa">
+        <span class="verde">Tudo para seu lar,</span>
+        <span class="azul">do essencial até soluções inteligentes.</span>
+    </div>
+
+    <div class="frase">
+        <span class="verde">Os produtos preferidos pelos consumidores.</span>
+    </div>
+
+    <div class="frase">
+        <span class="azul">Reconhecidos pela qualidade</span>
+        <span class="verde">e satisfação dos clientes.</span>
+    </div>
+
+</div>
 
 <div class="categorias-grid">
 
@@ -136,7 +140,7 @@ Tudo para seu lar, do essencial até soluções inteligentes.
 <div class="categoria-icone">
 <img src="svg/organizacao.svg" alt="Organização" loading="lazy">
 </div>
-
+        
 <h3>Organização</h3>
 
 <p>Organizadores, caixas, armários e acessórios.</p>
@@ -209,11 +213,11 @@ Tudo para seu lar, do essencial até soluções inteligentes.
 
 <!-- ================= MAIS VENDIDOS ================= -->
 
-<section id="maisvendidos" class="secao">
+<section id="+Vendidos" class="secao">
 
 <h2>⭐ Mais vendidos</h2>
 
-<p class="subtitulo">Os produtos preferidos pelos consumidores.</p>
+<!--<p class="subtitulo"-->
 
 <div class="produtos-grid">
 
@@ -251,11 +255,11 @@ Tudo para seu lar, do essencial até soluções inteligentes.
 
 <!-- ================= MAIS BEM AVALIADOS ================= -->
 
-<section id="avaliados" class="secao">
+<section id="+Avaliados" class="secao">
 
 <h2>❤️ Mais bem avaliados</h2>
 
-<p class="subtitulo">Produtos reconhecidos pela qualidade e satisfação dos clientes.</p>
+<!-- <p class="subtitulo"> </p> -->
 
 <div class="produtos-grid">
 
@@ -298,42 +302,38 @@ Tudo para seu lar, do essencial até soluções inteligentes.
 <h2>💰 Melhor custo-benefício</h2>
 
 <p class="subtitulo">
-Bons produtos não precisam ser os mais caros. Aqui você encontra opções equilibradas entre qualidade e preço.
+Melhor custo-benefício não é o mais barato, nem o mais caro.
+<br>
+É o produto que oferece a qualidade certa pelos recursos que você realmente vai usar.
 </p>
 
-<div class="produtos-grid">
+<div class="texto-rotativo">
 
-<div class="produto">
-<div class="produto-img"></div>
-<h3>Produto 9</h3>
-<p>Em breve.</p>
-<button>Ver produto</button>
+<div class="frase ativa">
+<span class="azul">Pesquisou?</span>
 </div>
 
-<div class="produto">
-<div class="produto-img"></div>
-<h3>Produto 10</h3>
-<p>Em breve.</p>
-<button>Ver produto</button>
+<div class="frase">
+<span class="verde">Comparou?</span>
 </div>
 
-<div class="produto">
-<div class="produto-img"></div>
-<h3>Produto 11</h3>
-<p>Em breve.</p>
-<button>Ver produto</button>
+<div class="frase">
+<span class="azul">Avaliou as opções?</span>
 </div>
 
-<div class="produto">
-<div class="produto-img"></div>
-<h3>Produto 12</h3>
-<p>Em breve.</p>
-<button>Ver produto</button>
+<div class="frase">
+<span class="verde">Ele tem tudo o que você realmente precisa no dia a dia?</span>
+</div>
+
+<div class="frase">
+<span class="azul">Então compre com segurança.</span>
+<span class="verde">Escolha o necessário, não o exagerado.</span>
 </div>
 
 </div>
 
 </section>
+
 
 <!-- ================= COMO FUNCIONA ================= -->
 
@@ -408,50 +408,24 @@ Bons produtos não precisam ser os mais caros. Aqui você encontra opções equi
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-    const frases = document.querySelectorAll(".frase");
+    const letreiros = document.querySelectorAll(".texto-rotativo");
 
-    if (!frases.length) return;
+    if (!letreiros.length) return;
 
-    // Tempo de cada letra
     const velocidadeLetra = 70;
-
-    // Tempo entre cada bloco (azul -> verde -> azul)
     const pausaEntreBlocos = 350;
-
-    // Tempo da frase completa visível
     const pausaFinal = 1800;
-
-    // Tempo antes da próxima frase
     const pausaTroca = 400;
-
-    frases.forEach((frase, i) => {
-
-        frase.dataset.original = frase.innerHTML;
-        frase.innerHTML = "";
-        frase.classList.remove("ativa");
-
-        if(i === 0){
-            frase.classList.add("ativa");
-        }
-
-    });
-
-    let atual = 0;
 
     function esperar(ms){
         return new Promise(r => setTimeout(r, ms));
     }
 
     async function escreverSpan(span, texto){
-
         for(const letra of texto){
-
             span.textContent += letra;
-
             await esperar(velocidadeLetra);
-
         }
-
     }
 
     async function escreverFrase(frase){
@@ -466,7 +440,6 @@ document.addEventListener("DOMContentLoaded", () => {
         for(const original of spans){
 
             const novo = document.createElement("span");
-
             novo.className = original.className;
 
             frase.appendChild(novo);
@@ -476,52 +449,69 @@ document.addEventListener("DOMContentLoaded", () => {
             await esperar(pausaEntreBlocos);
 
             frase.appendChild(document.createTextNode(" "));
-
         }
-
     }
 
     async function apagarFrase(frase){
 
         frase.style.transition = "opacity .8s ease";
-
         frase.style.opacity = "0";
 
         await esperar(800);
 
         frase.innerHTML = "";
-
         frase.style.opacity = "1";
-
     }
 
-    async function loop(){
+    letreiros.forEach(letreiro => {
 
-        while(true){
+        const frases = letreiro.querySelectorAll(".frase");
 
-            const frase = frases[atual];
+        if(!frases.length) return;
 
-            frase.classList.add("ativa");
+        frases.forEach((frase, i) => {
 
-            await escreverFrase(frase);
-
-            await esperar(pausaFinal);
-
-            await apagarFrase(frase);
-
+            frase.dataset.original = frase.innerHTML;
+            frase.innerHTML = "";
             frase.classList.remove("ativa");
 
-            atual = (atual + 1) % frases.length;
+            if(i === 0){
+                frase.classList.add("ativa");
+            }
 
-            frases[atual].classList.add("ativa");
+        });
 
-            await esperar(pausaTroca);
+        let atual = 0;
+
+        async function loop(){
+
+            while(true){
+
+                const frase = frases[atual];
+
+                frase.classList.add("ativa");
+
+                await escreverFrase(frase);
+
+                await esperar(pausaFinal);
+
+                await apagarFrase(frase);
+
+                frase.classList.remove("ativa");
+
+                atual = (atual + 1) % frases.length;
+
+                frases[atual].classList.add("ativa");
+
+                await esperar(pausaTroca);
+
+            }
 
         }
 
-    }
+        loop();
 
-    loop();
+    });
 
 });
 </script>
