@@ -88,7 +88,7 @@ align-items:center;
 
 min-height:140px;  
 
-background:rgba(45,187,99,.18);  
+background:rgba(45,187,99,.18);
 
 backdrop-filter:blur(14px);  
 
@@ -144,9 +144,9 @@ display:block;
 pointer-events:none;
 }
 .logo img{
-height:100%;
+height:90px;
 width:auto;
-max-height:100%;
+max-height:90px;
 
 object-fit:contain;
 
@@ -305,28 +305,9 @@ text-align:center;
 
 }
 
-.slogan{
-
-font-size:55px;  
-
-line-height:1.35;  
-
-font-weight:800;  
-
-color:#ffffff;  
-
-margin-bottom:40px;  
-
-max-width:620px;
-
-}
-
 /* ================= BRILHO SUAVE NOS TÍTULOS ================= */
 
-.slogan,
 .secao h2{
-
-color:#ffffff;
 
 text-shadow:
 0 1px 2px rgba(255,255,255,.35),
@@ -386,8 +367,9 @@ font-weight:700;
 line-height:1.7;
 
 white-space:normal;
-word-break:keep-all;
+word-break:break-word;
 overflow-wrap:break-word;
+ max-width:100%;
 
 text-align:center;
 padding:0 12px;
@@ -402,8 +384,9 @@ transform:translateY(0);
 }
 
 .frase span{
-display:inline;
-white-space:nowrap;
+    display:inline;
+    white-space:normal;
+    overflow-wrap:break-word;
 }
 
 .azul{
@@ -414,6 +397,213 @@ color:var(--azul);
 color:var(--verde);
 }
 
+/* ================= TÍTULO ================= */
+
+.hero-titulo{
+
+font-size:60px;
+
+font-weight:900;
+
+line-height:1.15;
+
+letter-spacing:-1px;
+
+color:#22384a;
+
+margin-bottom:30px;
+
+text-shadow:
+
+0 2px 16px rgba(255,255,255,.70);
+
+}
+
+/* Compatibilidade com o título antigo */
+
+.slogan{
+
+font-size:60px;
+
+font-weight:700;
+
+line-height:1.15;
+
+color:#ffffff;
+
+margin-bottom:30px;
+
+max-width:760px;
+
+}
+
+/* ================= OVERLAY ================= */
+
+.hero-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(255,255,255,.32),
+
+rgba(255,255,255,.82)
+
+),
+
+linear-gradient(
+
+135deg,
+
+rgba(23,136,214,.08),
+
+rgba(45,187,99,.08)
+
+);
+
+}
+
+/* ================= PESQUISA ================= */
+
+.hero-search{
+
+display:flex;
+
+width:min(760px,100%);
+
+margin:25px auto;
+
+background:#fff;
+
+border-radius:999px;
+
+padding:8px;
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.08);
+
+border:1px solid rgba(23,136,214,.08);
+
+}
+
+.hero-search input{
+
+flex:1;
+
+border:none;
+
+outline:none;
+
+background:transparent;
+
+padding:18px 24px;
+
+font-size:17px;
+
+color:var(--texto);
+
+}
+
+.hero-search button{
+
+border:none;
+
+cursor:pointer;
+
+padding:18px 34px;
+
+border-radius:999px;
+
+font-weight:700;
+
+font-size:15px;
+
+color:#fff;
+
+background:linear-gradient(
+135deg,
+var(--azul),
+var(--verde)
+);
+
+transition:.30s;
+
+}
+
+.hero-search button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+
+0 12px 28px rgba(23,136,214,.24);
+
+}
+
+/* ================= TAGS ================= */
+
+.hero-tags{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+margin-top:24px;
+
+}
+
+.hero-tags button{
+
+padding:12px 22px;
+
+border-radius:999px;
+
+border:none;
+
+cursor:pointer;
+
+font-size:14px;
+
+font-weight:700;
+
+color:var(--texto);
+
+background:#fff;
+
+box-shadow:
+
+0 10px 26px rgba(0,0,0,.06);
+
+transition:.30s;
+
+}
+
+.hero-tags button:hover{
+
+transform:translateY(-4px);
+
+background:
+
+linear-gradient(
+135deg,
+rgba(23,136,214,.12),
+rgba(45,187,99,.12)
+);
+
+color:var(--azul);
+
+}
 /* =====================================================
 --> SEÇÕES GERAIS (Desktop + Mobile) <--
 ===================================================== */
@@ -581,11 +771,12 @@ background:linear-gradient(
 
 }
 
-.produto-img::before{
+.produto-img img{
 
-content:"Imagem do Produto";  
-color:#6f7f8d;  
-font-size:15px;
+width:100%;
+height:100%;
+object-fit:contain;
+display:block;
 
 }
 
@@ -986,7 +1177,7 @@ nav a{
 
 .slogan{  
 
-    font-size:55px;  
+    font-size:35px;  
 
 }  
 
@@ -1058,7 +1249,7 @@ Ajustes específicos para smartphones menores.
 
 .slogan{  
 
-    font-size:24px;  
+    font-size:35px;  
 
 }  
 
@@ -1115,6 +1306,18 @@ Ajustes específicos para smartphones menores.
     gap:10px;  
 
 }
+ 
+@media (max-width:768px){
+
+    .produto-img{
+        height:160px;
+    }
+
+.produto-img img{
+        width:70%;
+        height:70%;
+        object-fit:contain;
+    }
 
 }
 
