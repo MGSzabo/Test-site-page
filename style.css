@@ -733,16 +733,20 @@ gap:32px;
 
 .produto{
 
-display:flex;  
-flex-direction:column;  
+position:relative;
 
-overflow:hidden;  
+display:flex;
+flex-direction:column;
 
-background:#fff;  
-border-radius:22px;  
-border:1px solid rgba(0,0,0,.05);  
+overflow:hidden;
 
-box-shadow:0 14px 40px rgba(0,0,0,.08);  
+background:#fff;
+
+border-radius:24px;
+
+border:1px solid rgba(23,136,214,.08);
+
+box-shadow:0 16px 42px rgba(0,0,0,.08);
 
 transition:.35s;
 
@@ -750,81 +754,255 @@ transition:.35s;
 
 .produto:hover{
 
-transform:translateY(-8px);  
-box-shadow:0 22px 50px rgba(0,0,0,.12);
+transform:translateY(-8px);
+
+box-shadow:0 22px 55px rgba(0,0,0,.12);
 
 }
 
 .produto-img{
 
-height:240px;  
+position:relative;
 
-display:flex;  
-justify-content:center;  
-align-items:center;  
+height:240px;
 
-background:linear-gradient(  
-    135deg,  
-    #d8edf9,  
-    #eef9f2  
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:18px;
+
+background:linear-gradient(
+135deg,
+#d8edf9,
+#eef9f2
 );
+
+overflow:hidden;
 
 }
 
 .produto-img img{
 
-width:100%;
-height:100%;
+max-width:100%;
+
+max-height:100%;
+
+width:auto;
+
+height:auto;
+
 object-fit:contain;
-display:block;
+
+transition:.35s;
+
+}
+
+.produto:hover .produto-img img{
+
+transform:scale(1.04);
+
+}
+
+.produto-selo{
+
+position:absolute;
+
+top:14px;
+
+left:14px;
+
+display:flex;
+
+align-items:center;
+
+gap:6px;
+
+padding:8px 14px;
+
+border-radius:999px;
+
+font-size:12px;
+
+font-weight:800;
+
+letter-spacing:.4px;
+
+background:#ffffff;
+
+color:#243443;
+
+box-shadow:0 6px 16px rgba(0,0,0,.10);
+
+z-index:20;
+
+}
+
+.selo-vendido{
+
+background:#22c55e;
+
+color:#fff;
+
+}
+
+.selo-premium{
+
+background:#f5c542;
+
+color:#243443;
+
+}
+
+.selo-oferta{
+
+background:#ef4444;
+
+color:#fff;
+
+}
+
+.selo-avaliado{
+
+background:#1788d6;
+
+color:#fff;
 
 }
 
 .produto h3{
 
-margin:24px 22px 12px;  
-font-size:24px;  
-color:#243443;  
+margin:18px 20px 10px;
+
+font-size:24px;
+
 font-weight:800;
+
+line-height:1.3;
+
+color:#243443;
 
 }
 
 .produto p{
 
-margin:0 22px 26px;  
-color:var(--textoClaro);  
-line-height:1.7;  
+margin:0 20px 22px;
+
+color:var(--textoClaro);
+
+font-size:16px;
+
+line-height:1.65;
+
 flex:1;
 
 }
 
 .produto button{
 
-margin:0 22px 24px;  
-padding:16px;  
+width:calc(100% - 40px);
 
-border:none;  
-border-radius:999px;  
+margin:0 20px 20px;
 
-cursor:pointer;  
+padding:16px 22px;
 
-color:#fff;  
-font-size:15px;  
-font-weight:700;  
+border:none;
 
-background:linear-gradient(  
-    135deg,  
-    var(--azul),  
-    var(--verde)  
-);  
+border-radius:999px;
 
-transition:.35s;
+cursor:pointer;
+
+font-size:16px;
+
+font-weight:700;
+
+color:#fff;
+
+background:linear-gradient(
+135deg,
+var(--azul),
+var(--verde)
+);
+
+transition:.30s;
 
 }
 
 .produto button:hover{
 
-transform:translateY(-3px);
+transform:translateY(-2px);
+
+box-shadow:
+0 10px 28px rgba(23,136,214,.25);
+
+}
+/* ================= SELOS DOS PRODUTOS ================= */
+
+.produto-selo{
+
+position:absolute;
+
+top:14px;
+left:14px;
+
+z-index:5;
+
+display:inline-flex;
+align-items:center;
+
+padding:7px 12px;
+
+border-radius:999px;
+
+font-size:12px;
+font-weight:700;
+
+color:#fff;
+
+box-shadow:
+0 6px 18px rgba(0,0,0,.12);
+
+}
+
+.selo-vendido{
+
+background:linear-gradient(
+135deg,
+var(--verde),
+#1fa857
+);
+
+}
+
+.selo-beneficio{
+
+background:linear-gradient(
+135deg,
+var(--azul),
+var(--verde)
+);
+
+}
+
+.selo-oferta{
+
+background:linear-gradient(
+135deg,
+#ff9800,
+#ff6f00
+);
+
+}
+
+.selo-avaliado{
+
+background:linear-gradient(
+135deg,
+#ff4d6d,
+#ff758f
+);
 
 }
 
